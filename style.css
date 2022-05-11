@@ -1,126 +1,137 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Write CSS code below */
+
 .main-content {
-    display: grid;
-    grid-template-columns: 300px 700px;
-    min-height: 1000px;
-    margin: 20px auto 0 10%;
+  display: grid;
+  max-height: 100vh;
+  min-height: 1000px;
+  grid-template-columns: 300px 700px;
 }
 
 .left-section {
-    grid-column: span 1;
-    background-color: #242531;
+  background-color: black;
+  color: aliceblue;
+  grid-column: 1 span;
+  /*  grid-column-start: 1;
+        grid-column-end: 2;  */
 }
 
 .right-section {
-    grid-column: span 1/span 2;
-    background-color: #f7f7f7;
+  background-color: whitesmoke;
+  width: 90%;
+  grid-column: span 1 / span 2;
+
+  /*   grid-column-start: 2;
+        grid-column-end: 3;  */
 }
 
 .left-content {
-    padding: 1rem;
+  padding: 1rem;
 }
 
-.profile-image {
-    display: block;
-    margin: auto;
-    width: 60%;
-    border: 5px white solid;
-    border-radius: 30%;
+.profile-image img {
+  display: block;
+  margin: auto;
+  border: 5px white solid;
+  border-radius: 30%;
+  width: 30%;
 }
 
 .name {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    word-spacing: 0.02px;
-    padding: 0.8rem;
-    color: #f5f5f5;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.8rem;
+  text-transform: uppercase;
+  word-spacing: 0.02px;
+  letter-spacing: 0.02px;
 }
 
 .designation {
-    font-size: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding-bottom: 0.5rem;
-    color: #94d9ea;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  color: skyblue;
 }
 
 .description {
-    font-size: 0.75rem;
-    text-align: center;
-    padding: 1rem;
-    color: #f5f5f5;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1rem;
 }
 
-.social-media {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-
+.icon a img {
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  align-content: center;
 }
 
-.icon {
-    padding: 3px;
+.contact span i {
+  width: 10px;
+  text-align: center;
 }
 
-.personal-details {
-    color: #f5f5f5;
-    list-style: none;
-}
-
-.skills-title {
-    font-size: 0.75rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 1rem 0.5rem;
-    color: #f5f5f5;
+.skills {
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 0.5rem;
 }
 
 .skill-name {
-    font-size: 0.65rem;
-    font-weight: 0.65rem;
-    text-align: left;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    color: #f5f5f5;
+  font-size: 0.65rem;
+  font-weight: 0.65rem;
+  text-align: left;
+  padding-bottom: 0.5rem;
 }
 
 .progress-bar {
-    border: 1px white solid;
-    height: 1px;
+  border: 1px white solid;
+  height: 4px;
+  background-color: white;
 }
 
+.bar-1 {
+  width: 90%;
+}
+
+.bar-2 {
+  width: 75%;
+}
+
+.bar-3 {
+  width: 60%;
+}
+
+/*  Write code for the right section here */
+
 .right-main-content {
-    padding: 2rem 3rem;
+  padding: 2rem 3rem;
 }
 
 .right-title {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.6rem;
-    letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 00.5rem;
+  letter-spacing: 1px;
 }
 
-.para {
-    padding: 0.3rem;
-}
+/* Make the Resume Responsive using Media queries */
 
-.edu-title {
-    padding: 0.4rem;
-}
-
-@media(max-width:674px) {
-    .main-content {
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (max-width: 673px) {
+  .main-content {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    min-height: 1000px;
+  }
 }
